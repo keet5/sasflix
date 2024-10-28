@@ -84,8 +84,13 @@ function dislikeClick() {
   color: white;
 }
 
-.active > .number {
+.like.active > .number {
   color: white;
+}
+
+.dislike.active > .number {
+  color: rgba(255, 255, 255, 0.95);
+  opacity: 0.4;
 }
 
 .dislike.active {
