@@ -14,7 +14,7 @@
         />
       </svg>
     </div>
-    <div class="text-title">Stas</div>
+    <div class="text-title">{{ comment.comment.user.fullName }}</div>
     <template v-if="comment.deleted">
       <div class="flex gap-[10px]">
         <div class="text-body">This comment has been deleted.</div>
@@ -27,7 +27,7 @@
       </div>
     </template>
     <template v-else>
-      <div class="text-body">His mother had always taught him</div>
+      <div class="text-body">{{ comment.comment.body }}</div>
       <div class="col-start-2 flex gap-[24px]">
         <div class="text-lightgray text-[15px]">Today</div>
         <c-anchor-button
