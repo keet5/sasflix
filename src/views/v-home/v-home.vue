@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-[51px] flex flex-col gap-[30px]">
-    <w-post v-for="post in postList" :post="post" />
+  <div class="flex flex-col gap-[30px]">
+    <w-post v-for="post in postList" :post="post" show-open-comments />
   </div>
 </template>
 

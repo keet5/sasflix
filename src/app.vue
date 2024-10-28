@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-[676px] m-auto flex flex-col min-h-[100vh] px-2">
-    <header>
+    <header class="mb-[51px]">
       <div
         class="leading-10 text-[40px] font-bold tracking-[0.10px] weight-bold text-center text-primary m-auto mt-4"
       >
@@ -9,7 +9,7 @@
     </header>
 
     <c-container-loader class="flex-1" :init-fun="init">
-      <RouterView />
+      <RouterView class="flex-1" />
     </c-container-loader>
   </div>
 </template>
@@ -22,7 +22,8 @@ import CContainerLoader from "@/components/c-container-loader"
 
 const postStore = usePost()
 
-function init() {
+async function init() {
+  // await new Promise(res => setTimeout(res, 1000000))
   return postStore.actions.loadPosts()
 }
 </script>

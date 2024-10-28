@@ -14,6 +14,7 @@
       />
 
       <c-anchor-button
+        v-if="showOpenComments"
         @click="openButtonClick"
         class="text-red text-[14px] tracking-[0.8px] hover:border-b-primary/50"
         >Open comments</c-anchor-button
@@ -37,6 +38,7 @@ import CAnchorButton from "@/components/c-anchor-button"
 
 interface Props {
   post: PostEntity
+  showOpenComments?: boolean
 }
 
 const props = defineProps<Props>()
