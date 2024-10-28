@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SFPro";
+  src: url("/src/assets/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFPro";
+  src: url("/src/assets/fonts/SF-Pro-Display-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  font-family: "SFPro";
+}
+
+root {
+  --color-primary: 255, 59, 48;
+}
+
+.text-title {
+  line-height: 24px;
+  font-family: "SFPro", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  word-spacing: 0.1px;
+}
+
+.text-body {
+  line-height: 20.4px;
+  font-family: "sfpro", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  word-spacing: 1.05px;
+}
+
+.text-lightgray {
+  color: rgba(4, 4, 5, 0.22);
+}

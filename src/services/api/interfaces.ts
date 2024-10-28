@@ -2,12 +2,20 @@ export interface PostsItem {
   id: number
   title: string
   tags: string[]
+  body: string
   reactions: {
     likes: number
     dislikes: number
   }
   views: number
   userId: number
+}
+
+export interface PostsGet {
+  limit: number
+  skip: number
+  total: number
+  posts: PostsItem[]
 }
 
 export interface PostsIdCommentsGet {

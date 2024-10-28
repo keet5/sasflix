@@ -15,13 +15,16 @@ export class PostEntity {
   }
 
   like() {
-    this.liked = true
-    this.disliked = false
+    if (this.liked) this.liked = false
+    else this.liked = true
+    if (this.disliked) this.disliked = false
   }
 
   dislike() {
-    this.disliked = false
-    this.liked = true
+    if (this.disliked) this.disliked = false
+    else this.disliked = true
+
+    if (this.liked) this.liked = false
   }
 }
 

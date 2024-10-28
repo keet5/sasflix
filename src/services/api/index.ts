@@ -3,11 +3,11 @@ import * as Interfaces from "./interfaces"
 
 const api = {
   posts: {
-    get: () => instance.get<Interfaces.PostsItem[]>("posts"),
+    get: () => instance.get<Interfaces.PostsGet>("posts"),
     id: {
       comments: {
         get: (id: number) =>
-          instance.get<Interfaces.PostsItem[]>(`posts/${id}/comments`),
+          instance.get<Interfaces.PostsIdCommentsGet>(`posts/${id}/comments`),
       },
     },
   },

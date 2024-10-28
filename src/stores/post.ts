@@ -5,7 +5,7 @@ import { PostEntity } from "@/services/entities"
 
 const usePost = defineStore("post", () => {
   const state = reactive({
-    postList: [] as PostEntity[],
+    postMap: new Map<number, PostEntity>(),
   })
 
   const getters = {}
@@ -15,7 +15,10 @@ const usePost = defineStore("post", () => {
 
   async function loadPosts() {
     const res = await api.posts.get()
-    state.postList = res.data.map(post => new PostEntity(post))
+    state.postMap.clear()
+    res.data.posts
+      .slice(0, 5)
+      .forEach(post => state.postMap.set(post.id, new PostEntity(post)))
   }
 
   async function loadComments(postId: number) {

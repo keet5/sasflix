@@ -11,7 +11,7 @@ const router = createRouter({
     },
     {
       path: "/post/:id",
-      name: "post",
+      name: "post-detail",
       component: () => import("@/views/v-post"),
     },
   ],
