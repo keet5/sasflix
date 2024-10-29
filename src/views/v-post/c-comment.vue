@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-[auto,1fr] grid-rows-[1fr,1fr,auto] gap-x-[7px] gap-y-[3px] items-start"
+    class="grid grid-cols-[auto,1fr] grid-rows-[auto,auto,auto] gap-x-[7px] gap-y-[3px] items-start"
   >
     <div class="row-span-2 pt-[5px]">
       <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
@@ -16,7 +16,7 @@
     </div>
     <div class="text-title">{{ comment.comment.user.fullName }}</div>
     <template v-if="comment.deleted">
-      <div class="flex gap-[10px]">
+      <div class="flex gap-[10px] flex-wrap">
         <div class="text-body">This comment has been deleted.</div>
         <c-anchor-button
           @click="returnClick"
